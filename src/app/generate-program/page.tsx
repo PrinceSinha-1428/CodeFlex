@@ -1,5 +1,5 @@
 
-const GenerateProgram = () => {
+const GenerateProgramPage = () => {
   return (
     <div>
       generate program
@@ -7,4 +7,5 @@ const GenerateProgram = () => {
   )
 }
 
-export default GenerateProgram
+export default GenerateProgramPage
+ 

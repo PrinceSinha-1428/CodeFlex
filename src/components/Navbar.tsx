@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="p-1 bg-primary/10 rounded">
             <ZapIcon className="size-4 text-primary"/>
           </div>
-          <span className="text-xl font-bold font-mono">code <span className="text-primary">flex</span>.ai</span>
+          <span className="text-xl font-bold font-mono">Code<span className="text-primary">Flex</span>.AI</span>
         </Link>
         {/* Navigation */}
         <nav className="flex items-center gap-5">

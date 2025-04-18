@@ -2,7 +2,6 @@ import TerminalOverlay from "@/components/TerminalOverlay";
 import { Button } from "@/components/ui/button";
 import UserPrograms from "@/components/UserPrograms";
 import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 

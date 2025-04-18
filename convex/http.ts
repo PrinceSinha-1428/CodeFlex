@@ -95,8 +95,9 @@ http.route({
     handler: httpAction(async (ctx,request) => {
         try {
             const payload = await request.json();
+            
             const {
-                user_id,
+               userId,
                 age,
                 height,
                 weight,
@@ -108,7 +109,7 @@ http.route({
               } = payload;
 
               console.log("payload is here",payload)
-        
+              
             const model = genAI.getGenerativeModel({
                 model:"gemini-2.0-flash-001",
                 generationConfig: {
@@ -208,7 +209,7 @@ http.route({
             console.log("validated diet plan",dietPlan);
             //save to database
             const planId = await ctx.runMutation(api.plans.createPlan, {
-                userId: user_id,
+                userId: userId ,
                 dietPlan,
                 isActive: true,
                 workoutPlan,

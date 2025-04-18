@@ -124,11 +124,12 @@ const GenerateProgramPage = () => {
         setMessages([]);
         setCallEnded(false);
         const fullName = user?.firstName
-          ? `${user?.firstName} ${user?.lastName || ""}`.trim()
+          ? `${user?.firstName}`.trim()
           : "There";
         await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
           variableValues: {
             full_name: fullName,
+            userId: user?.id,
           },
         });
       } catch (error) {

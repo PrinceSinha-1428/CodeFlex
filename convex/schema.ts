@@ -11,19 +11,19 @@ export default defineSchema({
 
 
     plans: defineTable({
-        userId: v.id("users"),
+        userId: v.string(),
         name: v.string(),
         workoutPlan: v.object({
             schedule: v.array(v.string()),
             exercises: v.array(v.object({
-                date: v.string(),
-                routines: v.array(v.object({
-                    name: v.string(),
-                    sets: v.optional(v.number()),
-                    reps: v.optional(v.number()),
-                    duration: v.optional(v.string()),
-                    description: v.optional(v.string()),
-                    exercises: v.optional(v.array(v.string())),
+                    day: v.string(),
+                    routines: v.array(v.object({
+                        name: v.string(),
+                        sets: v.optional(v.number()),
+                        reps: v.optional(v.number()),
+                        duration: v.optional(v.string()),
+                        description: v.optional(v.string()),
+                        exercises: v.optional(v.array(v.string())),
 
                 }))
             }))

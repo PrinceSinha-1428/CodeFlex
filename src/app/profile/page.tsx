@@ -16,7 +16,6 @@ const ProfilePage = () => {
   const {user} = useUser();
   const userId = user?.id as string;
   const allPlans = useQuery(api.plans.getUserPlans,{userId});
-  console.log(allPlans)
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null);
   const activePlan = allPlans?.find(plan => plan.isActive);
   const currentPlan = selectedPlanId ? allPlans?.find(plan => plan._id === selectedPlanId) : activePlan;

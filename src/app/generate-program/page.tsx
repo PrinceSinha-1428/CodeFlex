@@ -63,24 +63,20 @@ const GenerateProgramPage = () => {
   // setup event listeners
   useEffect(() => {
     const handleCallStart = () => {
-      console.log("Call Started");
       setConnecting(false);
       setCallActive(true);
       setCallEnded(false);
     };
     const handleCallEnd = () => {
-      console.log("call ended");
       setCallActive(false);
       setConnecting(false);
       setIsSpeaking(false);
       setCallEnded(true);
     };
     const handleSpeechStart = () => {
-      console.log("Ai Speaking");
       setIsSpeaking(true);
     };
     const handleSpeechEnd = () => {
-      console.log("Ai stoped Speaking");
       setIsSpeaking(false);
     };
     const handleMessage = (message: any) => {

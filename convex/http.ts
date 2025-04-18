@@ -108,7 +108,6 @@ http.route({
                 dietary_restrictions,
               } = payload;
 
-              console.log("payload is here",payload)
               
             const model = genAI.getGenerativeModel({
                 model:"gemini-2.0-flash-001",

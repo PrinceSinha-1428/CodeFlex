@@ -125,7 +125,7 @@ const GenerateProgramPage = () => {
         await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
           variableValues: {
             full_name: fullName,
-            userId: user?.id,
+            user_id: user?.id,
           },
         });
       } catch (error) {
@@ -134,6 +134,11 @@ const GenerateProgramPage = () => {
       }
     }
   };
+
+
+  const fucn = () => {
+        console.log(user)
+  }
 
   return (
     <div className="flex flex-col min-h-screen text-foreground overflow-hidden  pb-6 pt-24">
@@ -310,6 +315,7 @@ const GenerateProgramPage = () => {
           </Button>
         </div>
       </div>
+      <h1 className="text-red-500 text-4xl font-bold" onClick={fucn}>Hello</h1>
     </div>
   );
 };

@@ -226,7 +226,7 @@ http.route({
             console.log("validated diet plan",dietPlan);
             //save to database
             const planId = await ctx.runMutation(api.plans.createPlan, {
-                userId: userId ,
+                userId: userId,
                 dietPlan,
                 isActive: true,
                 workoutPlan,

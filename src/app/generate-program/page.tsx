@@ -315,7 +315,6 @@ const GenerateProgramPage = () => {
           </Button>
         </div>
       </div>
-      <h1 className="text-red-500 text-4xl font-bold" onClick={fucn}>Hello</h1>
     </div>
   );
 };
